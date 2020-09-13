@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import "antd/dist/antd.css";
+
+import NestedTable from "./NestedTable/NestedTable";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <S.App>
+      <NestedTable></NestedTable>
+    </S.App>
   );
 }
+
+const S = {};
+
+S.App = styled.div`
+  width: 62%;
+  margin: 0 auto;
+  padding-top: 6rem;
+`;
 
 export default App;
